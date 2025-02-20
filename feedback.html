@@ -6,86 +6,108 @@
     <title>Feedback Form</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background-color: #e3f2fd;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
         }
-        .container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            width: 350px;
+        .form-container {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
         }
         h2 {
-            text-align: center;
-            color: #333;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        .input-group {
+            margin: 12px 0;
+            text-align: left;
         }
         label {
             font-weight: bold;
-            margin-top: 10px;
-            display: block;
+            color: #333;
         }
-        input, textarea, select {
+        input, select, textarea {
             width: 100%;
             padding: 8px;
             margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #007bff;
+            outline: none;
         }
         button {
             width: 100%;
-            padding: 10px;
-            background: #28a745;
+            background: #007bff;
             color: white;
+            padding: 12px;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-size: 16px;
             cursor: pointer;
             margin-top: 15px;
+            transition: background 0.3s;
         }
         button:hover {
-            background: #218838;
+            background: #0056b3;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
+<div class="form-container">
     <h2>Feedback Form</h2>
     <form>
-        <label for="name">Name (Optional):</label>
-        <input type="text" id="name" name="name">
+        <div class="input-group">
+            <label for="name">Name (Optional):</label>
+            <input type="text" id="name" name="name">
+        </div>
 
-        <label for="email">Email (Optional):</label>
-        <input type="email" id="email" name="email">
+        <div class="input-group">
+            <label for="email">Email (Optional):</label>
+            <input type="email" id="email" name="email">
+        </div>
 
-        <label for="phone">Phone (Optional):</label>
-        <input type="tel" id="phone" name="phone">
+        <div class="input-group">
+            <label for="phone">Phone (Optional):</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
 
-        <label for="rating">Rating:</label>
-        <select id="rating" name="rating" required>
-            <option value="" disabled selected>Select a rating</option>
-            <option value="5">Excellent</option>
-            <option value="4">Very Good</option>
-            <option value="3">Good</option>
-            <option value="2">Fair</option>
-            <option value="1">Poor</option>
-        </select>
+        <div class="input-group">
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value="" disabled selected>Select a rating</option>
+                <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                <option value="4">⭐⭐⭐⭐ - Very Good</option>
+                <option value="3">⭐⭐⭐ - Good</option>
+                <option value="2">⭐⭐ - Fair</option>
+                <option value="1">⭐ - Poor</option>
+            </select>
+        </div>
 
-        <label for="questions">Any Questions regarding product or service:</label>
-        <textarea id="questions" name="questions" rows="3" required></textarea>
+        <div class="input-group">
+            <label for="questions">Any Questions regarding product or service:</label>
+            <textarea id="questions" name="questions" rows="3" required></textarea>
+        </div>
 
-        <label for="comments">Additional Comments (Optional):</label>
-        <textarea id="comments" name="comments" rows="3"></textarea>
+        <div class="input-group">
+            <label for="comments">Additional Comments (Optional):</label>
+            <textarea id="comments" name="comments" rows="3"></textarea>
+        </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit">Submit Feedback</button>
     </form>
 </div>
 
 </body>
 </html>
-    
